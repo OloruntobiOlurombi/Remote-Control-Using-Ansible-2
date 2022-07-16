@@ -1,0 +1,17 @@
+AWSTemplateFormatVersion: 2010-09-09
+
+Description: Creating an EC2 instance with hard coded values 
+
+Resources:
+  MyEC2:
+    Type: AWS::EC2::Instance
+    Properties: 
+      InstanceType: "t2.micro"
+      ImageId: "ami-052efd3df9dad4825"
+      SecurityGroupIds: 
+        - "sg-0cdd84a41d6e5a53e"
+      SubnetId: "subnet-037fe5f8e2d468b9b"
+      KeyName: "udacity-5"
+      Tags: 
+        - Key: "Project-5"
+          Value: "udacity-5"
